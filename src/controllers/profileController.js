@@ -1,6 +1,6 @@
-const github = require("../services/githubService");
-const analyzer = require("../services/analyzerService");
-const model = require("../models/profileModel");
+const github = require("../services/githubService.js");
+const analyzer = require("../services/analyzerService.js");
+const model = require("../models/profileModel.js");
 
 exports.analyze = async (req, res) => {
   const username = req.params.username;
