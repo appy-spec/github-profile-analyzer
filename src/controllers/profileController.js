@@ -3,12 +3,12 @@ const analyzer = require("../services/analyzerService.js");
 const model = require("../models/profileModel.js");
 
 exports.analyze = async (req, res) => {
+
   const username = req.params.username;
 
   const data = await github.getGithubData(username);
-
   const analysis = analyzer.analyzeRepos(data.repos);
-
+ 
   await model.saveProfile([
     username,
 
@@ -34,25 +34,24 @@ exports.analyze = async (req, res) => {
 
     analysis.average_stars,
 
-    data.user.created_at,
+    new Date(data.user.created_at),
 
-    data.user.followers,
-
-    analysis.total_stars,
-
+    data.user.followers, 
+    
+    analysis.total_stars, 
+    
     analysis.total_forks,
+
   ]);
 
   res.json({
     message: "Profile analyzed successfully",
-
     analysis,
   });
 };
 
 exports.getProfiles = async (req, res) => {
   const data = await model.getAll();
-
   res.json(data);
 };
 

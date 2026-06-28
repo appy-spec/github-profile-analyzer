@@ -9,7 +9,6 @@ exports.getGithubData = async (username) => {
 
   return {
     user: user.data,
-
     repos: repos.data,
   };
 };
