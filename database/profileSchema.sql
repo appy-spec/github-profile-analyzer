@@ -1,5 +1,3 @@
-USE railway;
-
 CREATE TABLE profiles(
 
 id INT AUTO_INCREMENT PRIMARY KEY,
