@@ -235,7 +235,7 @@ https://github-profile-analyzer-bsg2.onrender.com
 ### Method
 
 ```http
-GET
+POST
 ```
 
 ### Endpoint
@@ -326,13 +326,13 @@ Import this file into Postman.
 Available API:
 
 ```http
-GET /api/analyze/:username
+POST /api/analyze/:username
 ```
 
 Example:
 
 ```http
-GET
+POST
 
 https://github-profile-analyzer-bsg2.onrender.com/api/analyze/appy-spec
 ```
