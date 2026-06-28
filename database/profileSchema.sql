@@ -1,5 +1,4 @@
-CREATE DATABASE github_analyzer;
-USE github_analyzer;
+USE railway;
 
 CREATE TABLE profiles(
 
@@ -29,7 +28,7 @@ most_starred_repo VARCHAR(200),
 
 average_stars FLOAT,
 
-account_created DATE,
+account_created DATETIME,
 
 analyzed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
